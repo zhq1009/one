@@ -1,0 +1,67 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="head">
+    <scroll-view scroll-x="{{true}}">
+      <view class="scrollview">
+        <image src="/assets/images/back.png" class="scrollimage"></image>
+        <view class="btn">
+          <view wx:for="{{user}}" wx:key="user" class="btnuser {{index==num? 'active' :''}}" bindtap="btnuser"
+            data-index="{{index}}">{{item}}</view>
+        </view>
+        <view class="btnindex" bindtap="btnindex">
+           首页
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="content">
+    <view wx:if="{{num==0}}">
+      <form bindsubmit="login" bindreset="login">
+        <view class="inp">
+          <view>电子邮件或电子邮件</view>
+          <input name="username" placeholder="用户名或电子邮件" />
+        </view>
+        <view class="inp">
+          <view>密码</view>
+          <input name="password" placeholder="密码" type="password"/>
+        </view>
+
+        <view>
+          <button formType="submit" class="btnsub">登录</button>
+        </view>
+
+      </form>
+    </view>
+
+    <view wx:if="{{num==1}}">
+      <form bindsubmit="registered" bindreset="registered">
+        <view class="myform">
+          <view class="inp">
+            <view>昵称</view>
+            <input name="name" placeholder="昵称" />
+            <view class="error">{{error.name}}</view>
+          </view>
+          <view class="username inp">
+            <view>用户名</view>
+            <input name="login" placeholder="用户名" />
+            <view class="error">{{error.login}}</view>
+          </view>
+        </view>
+        <view class="inp">
+          <view>电子邮件</view>
+          <input name="email" placeholder="电子邮件" />
+          <view class="error">{{error.email}}</view>
+        </view>
+        <view class="inp">
+          <view>密码</view>
+          <input name="password" placeholder="密码" type="password" />
+          <view class="error">{{error.password}}</view>
+        </view>
+
+        <view>
+          <button formType="submit" class="btnsub">注册</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,124 @@
+/* pages/viedo/viedo.wxss */
+@import '/towxml/style/main.wxss';
+/* @import '/towxml/style/theme/dark.wxss'; */
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.video {
+  height: 170px;
+}
+
+.courselist {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.contentimage {
+  width: 22px;
+  height: 22px;
+  margin: 2px;
+}
+
+.myscroll {
+  width: 95%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.mengban {
+  width: 17%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -999;
+}
+
+/* 蒙版动画 */
+.mengbanone {
+  transition: all .5s ease .2s;
+  opacity: 0.3;
+  z-index: 999;
+}
+
+.mengbantwo {
+  transition: all .5s ease .2s;
+  opacity: 0;
+  z-index: -999;
+}
+
+.leftone {
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -85%;
+}
+
+/* 左动画 */
+.left {
+  transition: all 1s ease .2s;
+  left: 0;
+}
+
+.leftfalse {
+  transition: all 1s ease .2s;
+  left: -85%;
+}
+
+
+/* 整体动画 */
+.containerone {
+  position: relative;
+  left: 0;
+}
+
+.contenttrue {
+  transition: all 1s ease .2s;
+  left: 85%;
+}
+
+.contentfalse {
+  transition: all 1s ease .2s;
+  left: 0;
+}
+
+.leftmain{
+  height: 100%;
+}
+.mainlist {
+  width: 86%;
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  position: relative;
+  left: 10px;
+  align-items: center;
+}
+
+.listicon {
+  width: 15px;
+  height: 15px;
+  flex: 1;
+  margin-right: 10px;
+}
+.lefttwo{
+  flex: 6;
+}
+.lefttime{
+  flex: 1;
+}
+/* 高亮 */
+.highlighted{
+  color: aqua;
+}

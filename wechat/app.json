@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/categories/categories",
+    "pages/tutorial/tutorial",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/news/news",
+    "pages/webview/webview",
+    "pages/search/search",
+    "pages/searchnew/searchnew",
+    "pages/sandian/sandian",
+    "pages/courses/courses",
+    "pages/viedo/viedo"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "长乐未央",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1f99b0",
+    "borderStyle": "white",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "/assets/images/find.png",
+        "selectedIconPath": "/assets/images/find1.png"
+      },
+      {
+        "pagePath": "pages/categories/categories",
+        "text": "分类",
+        "iconPath": "/assets/images/category1.png",
+        "selectedIconPath": "/assets/images/category.png"
+      },
+      {
+        "pagePath": "pages/tutorial/tutorial",
+        "text": "教程",
+        "iconPath": "/assets/images/like.png",
+        "selectedIconPath": "/assets/images/like1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/assets/images/user.png",
+        "selectedIconPath": "/assets/images/user1.png"
+      }
+    ]
+  },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

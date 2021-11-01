@@ -1,0 +1,100 @@
+<view class="container">
+  <view class="head">
+    <view class="iconfont icon-lingdang lingdang" bindtap="news"></view>
+    <view class="iconfont icon-search search" bindtap="search"></view>
+    <view class="iconfont icon-sandian sandian" bindtap="sandian"></view>
+  </view>
+  <view class="content">
+    <view class="found">发现</view>
+    <view class="title">推荐课程</view>
+    <!-- 轮播图 -->
+    <swiper class="swiperimg" circular="{{true}}" autoplay="{{true}}">
+      <swiper-item wx:for="{{introductory_courses}}" wx:key='introductory_courses' class="swiperitem" bindtap="calendar_courses" data-id="{{item.id}}" data-name="{{item.name}}">
+        <view class="image_box">
+          <image src="{{item.image}}" class="image"></image>
+        </view>
+        <view class="time">{{item.created_at}}</view>
+        <view class="swipername">{{item.name}}</view>
+        <view class="time">{{item.updated_at}}</view>
+      </swiper-item>
+    </swiper>
+    <!-- 点 -->
+    <view class="mydian">
+      <view wx:for="{{introductory_courses}}" wx:key='introductory_courses'
+        class="dian {{index==num?'highlighted':'' }}">
+      </view>
+    </view>
+
+    <!-- 课程发布日历 -->
+    <view>
+      <view class="title">课程发布日历</view>
+      <scroll-view scroll-x="{{true}}">
+        <view class="myscroll">
+          <view wx:for="{{calendar_courses}}" wx:key="calendar_courses" class="calendar" bindtap="calendar_courses" data-id="{{item.id}}" data-name="{{item.name}}">
+            <image src="{{item.image}}" class="scroll_image"></image>
+            <view class="scrollname">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+
+
+      <!-- 视频教程 -->
+      <view class="top">
+        <view class="border_"></view>
+        <view>视频教程</view>
+        <view class="border_"></view>
+      </view>
+      <view class="video_name">VIDEO</view>
+
+      <view class="title">最受欢迎的课程</view>
+      <scroll-view scroll-x="{{true}}">
+        <view class="myscroll">
+          <view wx:for="{{popular_courses}}" wx:key="popular_courses" class="calendar" bindtap="calendar_courses" data-id="{{item.id}}" data-name="{{item.name}}">
+            <image src="{{item.image}}" class="scroll_image"></image>
+            <view class="scrollname">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <view class="title">入门课程</view>
+      <scroll-view scroll-x="{{true}}">
+        <view class="myscroll">
+          <view wx:for="{{recommended_courses}}" wx:key="calendar_courses" class="calendar" bindtap="calendar_courses" data-id="{{item.id}}" data-name="{{item.name}}">
+            <image src="{{item.image}}" class="scroll_image"></image>
+            <view class="scrollname">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+
+
+      <!-- 开发教程 -->
+      <view class="top">
+        <view class="border_"></view>
+        <view>开发教程</view>
+        <view class="border_"></view>
+      </view>
+      <view class="video_name">DOCUMENT</view>
+
+
+      <view class="title">推荐教程</view>
+      <scroll-view scroll-x="{{true}}">
+        <view class="myscroll">
+          <view wx:for="{{recommended_documents}}" wx:key="calendar_courses" class="calendar" >
+            <image src="{{item.image}}" class="scroll_image"></image>
+            <view class="scrollname">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <view class="title">人气教程</view>
+      <scroll-view scroll-x="{{true}}">
+        <view class="myscroll">
+          <view wx:for="{{popular_documents}}" wx:key="calendar_courses" class="calendar">
+            <image src="{{item.image}}" class="scroll_image"></image>
+            <view class="scrollname">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

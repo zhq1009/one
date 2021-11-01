@@ -1,0 +1,44 @@
+/* pages/news/news.wxss */
+.container {
+  font-size: 14px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  border-bottom: 1px solid gray;
+  box-shadow: gray;
+}
+
+.headleft {
+  text-indent: 10px;
+  flex: 8;
+}
+
+.headright {
+  flex: 1;
+}
+.headimage {
+ width: 20px;
+  height: 20px;
+}
+.content{
+  position: relative;
+  left: 5px;
+  margin: 0 auto;
+}
+.main{
+  border-bottom: 1px solid gray;
+  margin: 10px 0;
+  height: 200px;
+}
+.maintitle{
+ width: 95%;
+}
+.maintime{
+  width: 95%;
+ margin: 10px 0;
+ text-align: right;
+}

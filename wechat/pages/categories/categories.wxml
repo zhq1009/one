@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="title">
+    <scroll-view scroll-x="{{true}}" class="myscroll">
+      <view class="name_box">
+        <view class="name {{item.id==id? 'active':''}}" wx:for="{{categories}}" wx:key="categories" bindtap="change"
+          data-id="{{item.id}}">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view>
+    <view wx:if="{{courseslist}}">暂无课程</view>
+    <view wx:if="{{courses.length>0}}">
+      <view wx:for="{{courses}}" wx:key="courses" bindtap="courses" data-id="{{item.id}}" data-name="{{item.name}}">
+        <image src="{{item.image}}" class="coursesimage"></image>
+        <view class="coursesname">{{item.name}}</view>
+        <view class="coursesbody">{{item.body}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view>
+    <input type="text" bindconfirm="searchinp" value="{{search}}" class="searchinp" />
+  </view>
+  <view class="hot">
+    <view>热搜</view>
+    <view wx:for="{{hot}}" wx:key="hot" bindtap="hot" data-hot="{{item}}">{{item}}</view>
+  </view>
+</view>

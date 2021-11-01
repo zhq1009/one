@@ -1,0 +1,10 @@
+<!--pages/searchnew/searchnew.wxml-->
+<view class="container">
+  <view>
+    <view wx:for="{{courses}}" wx:key="courses">
+      <image src="{{item.image}}" class="coursesimage"></image>
+      <view class="coursesname">{{item.name}}</view>
+      <view class="coursesbody">{{item.body}}</view>
+    </view>
+  </view>
+</view>

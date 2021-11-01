@@ -1,0 +1,112 @@
+/* pages/courses/courses.wxss */
+.headimage {
+  height: 150px;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+}
+
+.maintotal {
+  margin: 5px 0;
+  width: 50px;
+  color: white;
+  background-color: teal;
+  padding: 2px 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.mainname {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.mainbody {
+  display: -webkit-box;
+  /*设置为弹性盒子*/
+  -webkit-line-clamp: 3;
+  /*最多显示5行*/
+  overflow: hidden;
+  /*超出隐藏*/
+  text-overflow: ellipsis;
+  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  /*强制英文单词自动换行*/
+}
+
+.mainmenban {
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(to top, white, transparent);
+  position: absolute;
+  bottom: 30px;
+}
+
+.mainicon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.mainiconflip{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  transform: rotate(180deg);
+}
+
+.mainiconimage {
+  width: 30px;
+  height: 30px;
+}
+
+.list {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+}
+
+.listleft {
+  flex: 1;
+  display: flex;
+}
+
+.listlefticon {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 15px solid teal;
+  border-bottom: 8px solid transparent;
+  margin: 15px 20px;
+}
+.listindex{
+  margin: 15px 0;
+  width: 20px;
+}
+.listright {
+  flex: 8;
+  margin-left: 10px;
+}
+.listrighttitle{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.listrightone{
+  width: 50px;
+  color: white;
+  background-color: teal;
+  padding: 2px 10px;
+  text-align: center;
+  font-size: 12px;
+}
+.listrighttime{
+  color: gray;
+  margin-left: 5px;
+  font-size: 12px;
+}

@@ -1,0 +1,105 @@
+.btnlogin {
+  background-color: blue;
+  margin: 200px auto;
+  color: white;
+}
+
+.head {
+  border-bottom: 1PX solid gray;
+}
+
+.title_box {
+  display: flex;
+
+}
+
+.title {
+  white-space: nowrap;
+  height: 20px;
+  margin: 0 10px;
+  color: gray;
+  padding-bottom: 5px;
+}
+
+.active {
+  color: black;
+  border-bottom: 2px solid blue;
+}
+
+.tab {
+  display: flex;
+  background-color: yellow;
+  height: 40px;
+  font-size: 13px;
+}
+
+.tableft {
+  flex: 1;
+  align-self: center;
+}
+
+.tabimage {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 20px;
+}
+
+.tabright {
+  flex: 4;
+  color: white;
+  align-self: center;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.information {
+  display: flex;
+  height: 150px;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(201, 198, 198);
+}
+
+.informationleft,
+.mainleft {
+  flex: 1;
+  align-self: center;
+  color: rgb(201, 198, 198);
+}
+
+.informationright,
+.mainright {
+  flex: 2;
+  align-self: center;
+}
+
+.informationimage {
+  width: 80px;
+  height: 80px;
+}
+
+.main {
+  display: flex;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(201, 198, 198);
+  height: 30px;
+  align-items:center;
+}
+.coursesimage{
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+.coursesbody{
+  color: gray;
+
+  display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 3;  /*最多显示3行*/
+  overflow: hidden;  /*超出隐藏*/
+  text-overflow: ellipsis;  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行*/
+}

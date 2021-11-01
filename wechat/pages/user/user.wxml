@@ -1,0 +1,84 @@
+<!--pages/user/user.wxml-->
+<view wx:if="{{token}}">
+  <view class="head">
+    <scroll-view scroll-x="{{true}}">
+      <view class="title_box">
+        <view wx:for="{{title}}" wx:key="title" class="title {{index==ind ? 'active':''}}" bindtap="changetitle"
+          data-index="{{index}}">{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 我的主页 -->
+  <view wx:if="{{ind==0}}">
+    <view class="tab">
+      <view class="tableft">
+        <image src="/assets/images/reword.png" class="tabimage"></image>
+      </view>
+      <view class="tabright">
+        <view>所有在线课程都可免费观看</view>
+        <view>报名线下班，每班6-10人，老学员都推荐！</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="information">
+        <view class="informationleft">
+          <image src="/assets/images/mine.png" class="informationimage"></image>
+        </view>
+        <view class="informationright">
+          <view>学籍编号：{{user.id}}</view>
+          <view>{{user.role_name}}</view>
+        </view>
+      </view>
+      <view class="main">
+        <view class="mainleft">电子邮箱</view>
+        <view class="mainright">{{user.email}}</view>
+      </view>
+      <view class="main">
+        <view class="mainleft">性别</view>
+        <view class="mainright">{{user.sex_name}}</view>
+      </view>
+      <view class="main">
+        <view class="mainleft">公司</view>
+        <view class="mainright" wx:if="{{user.company==null}}">暂无</view>
+        <view class="mainright" wx:else>{{user.company}}</view>
+      </view>
+      <view class="main">
+        <view class="mainleft">自我介绍</view>
+        <view class="mainright" wx:if="{{user.introduce==null}}">暂无</view>
+        <view class="mainright" wx:else>{{user.introduce}}</view>
+      </view>
+      <view class="main" bindtap="btnexit">点击退出</view>
+    </view>
+  </view>
+  <!-- 喜欢的课程 -->
+  <view wx:elif="{{ind==1}}" class="content">
+    <view wx:if="{{courses.length==0}}">暂无喜欢课程</view>
+    <view wx:else>
+      <view wx:for="{{courses}}" wx:key="courses">
+        <view class="contentimage">
+          <image src="{{item.image}}" class="coursesimage"></image>
+        </view>
+        <view>{{item.name}}</view>
+        <view class="coursesbody">{{item.body}}</view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 观看历史 -->
+  <view wx:elif="{{ind==2}}" class="content">
+    <view wx:if="{{histories.length==0}}">暂无历史</view>
+    <view wx:else>
+      <view wx:for="{{histories}}" wx:key="histories">
+        <view class="contentimage">
+          <image src="{{item.course.image}}" class="coursesimage"></image>
+        </view>
+        <view>{{item.course.name}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view wx:else>
+  <button class="btnlogin" bindtap="login">登录</button>
+</view>

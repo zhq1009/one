@@ -1,0 +1,15 @@
+<!--pages/news/news.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="headleft">新闻</view>
+    <view class="headright">
+      <image src="/assets/images/back.png" class="headimage"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="main" wx:for="{{articles}}" wx:key="articles">
+      <view class="maintitle" bindtap="maintitle" data-id="{{item.id}}">{{item.title}}</view>
+      <view class="maintime">{{item.created_at}}</view>
+    </view>
+  </view>
+</view>

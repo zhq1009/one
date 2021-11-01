@@ -1,0 +1,28 @@
+<!--pages/courses/courses.wxml-->
+<view class="container">
+  <view class="head">
+    <image src="{{courses.image}}" class="headimage"></image>
+  </view>
+  <view class="content">
+    <view class="main">
+      <view class="maintotal">全{{chapters.length}}回</view>
+      <view class="mainname">{{courses.name}}</view>
+      <view class="{{icon?'mainbody':''}}">{{courses.body}}</view>
+      <view class=" {{icon?'mainmenban':''}}"></view>
+      <view class="{{icon?'mainicon':'mainiconflip'}}" bindtap="btnicon">
+        <image src="/assets/images/arrow.png" class="mainiconimage"></image>
+      </view>
+    </view>
+    <view class="list" wx:for="{{chapters}}" wx:key='chapters' bindtap="chapters" data-id="{{item.id}}">
+      <view class="listleft">
+        <view class="listlefticon"></view>
+        <view class="listindex">{{index+1}}</view>
+      </view>
+      <view class="listright">
+        <view class="listrighttitle">{{item.title}}</view>
+        <text class="listrightone">{{item.free?'免费':'会员'}}</text>
+        <text class="listrighttime">{{item.created_at}}</text>
+      </view>
+    </view>
+  </view>
+</view>

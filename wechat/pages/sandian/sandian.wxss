@@ -1,0 +1,30 @@
+/* pages/sandian/sandian.wxss */
+.container {
+  width: 95%;
+  height: 800px;
+  margin: 0 auto;
+  font-size: 12px;
+  background-color: rgb(221, 219, 219);
+}
+.main{
+  padding-top: 10px;
+}
+.maintext{
+  color: rgb(139, 138, 138);
+  text-indent: 2em;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.mainlist{
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  color: rgb(60, 128, 155);
+}
+.exit{
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  color: rgb(60, 128, 155);
+}

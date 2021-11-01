@@ -1,0 +1,35 @@
+<import src="/towxml/entry.wxml" />
+<!--pages/viedo/viedo.wxml-->
+<view class="container">
+  <view class="containerone {{check?'contenttrue':'contentfalse'}}">
+    <video src="{{chapter.video}}" class="video"></video>
+    <view class="content">
+      <view class="courselist" bindtap="courselist">
+        <image src="/assets/images/list.png" class="contentimage"></image>
+        <view>课程列表</view>
+      </view>
+      <scroll-view scroll-y="{{true}}" class="myscroll">
+        <template is="entry" data="{{...body}}"></template>
+        <!-- <view>{{chapter.body}}</view> -->
+      </scroll-view>
+    </view>
+  </view>
+  <view class="mengban {{check?'mengbanone':'mengbantwo'}}" bindtap="mengban">
+  </view>
+
+
+  <view class="leftone {{check?'left':'leftfalse'}}">
+    <scroll-view scroll-y="{{true}}" class="leftmain">
+      <view>
+        <view class="mainlist {{item.id==chapter.id?'highlighted':''}}" wx:for="{{chapters}}" wx:key="chapters" bindtap="mainlist" data-id="{{item.id}}">
+          <view>
+            <image src="/assets/images/play.png" class="listicon"></image>
+          </view>
+          <view class="lefttwo">{{item.title}}</view>
+          <view class="lefttime">{{item.time}}</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

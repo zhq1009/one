@@ -1,0 +1,16 @@
+<!--pages/sandian/sandian.wxml-->
+<view class="container">
+  <view class="main">
+    <view class="maintext">浏览</view>
+    <view class="mainlist" wx:for="{{browse}}" wx:key="browse">{{item}}</view>
+  </view>
+  <view class="main">
+    <view  class="maintext">长乐未央</view>
+    <view class="mainlist" wx:for="{{clwy}}" wx:key="clwy">{{item}}</view>
+  </view>
+  <view class="main">
+    <view  class="maintext">线下培训</view>
+    <view class="mainlist" wx:for="{{training}}" wx:key="training">{{item}}</view>
+  </view>
+  <view class="exit" bindtap="exit">立即退出</view>
+</view>
